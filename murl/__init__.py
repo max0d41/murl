@@ -23,6 +23,8 @@ class Url(object):
     query_string = None
     fragment = None
 
+    __serialize__ = ('scheme', 'scheme_delim', 'username', 'password', 'host', 'port', 'path', 'path_prefix', 'query', 'query_string', 'fragment')
+
     def __init__(self, url, fulltext=True):
         """query_string is ignored on to_string function
         """
